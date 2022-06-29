@@ -1,0 +1,36 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <div class="card">
+                <div class="text-center">
+                    <h1>Slot Booking</h1>
+                    <h6>Book Here</h6>
+                </div>
+                <form   #myForm="ngForm" >
+                    <div class="mb-3">
+                        <mat-form-field color="accent" appearance="fill">
+                            <mat-label>Pick Your Date</mat-label>
+                            <input matInput [matDatepicker]="picker1" [(ngModel)]="slot.slotDate" #slotDate="ngModel" required [class.is-invalid]="slotDate.invalid && slotDate.touched" id="slotDate" name="slotDate">
+                            <mat-hint>MM/DD/YYYY</mat-hint>
+                            <mat-datepicker-toggle matSuffix [for]="picker1"></mat-datepicker-toggle>
+                            <mat-datepicker #picker1></mat-datepicker>
+                        </mat-form-field>
+                    </div>
+                    <div class="mb-3">
+                        <mat-form-field appearance="fill">
+                            <mat-label>Pick Your Time</mat-label>
+                            <mat-select [(ngModel)]="slot.slotTime" #slotTime="ngModel" required [class.is-invalid]="slotTime.invalid && slotTime.touched" id="slotTime" name="slotTime">
+                                <mat-option>None</mat-option>
+                              <mat-option value="8:00am">8:00am</mat-option>
+                              <mat-option value="10:00am">10:00am</mat-option>
+                              <mat-option value="12:00pm">12:00pm</mat-option>
+                            </mat-select>
+                            <mat-hint >Here's the dropdown arrow ^</mat-hint>
+                        </mat-form-field>   
+                    </div>
+                </form>
+                <button class="bookButton" mat-raised-button color="warn" [disabled]="myForm.form.invalid" (click)="onBook(myForm)">Book</button>  
+            </div> 
+        </div>
+    </div>
+</div>

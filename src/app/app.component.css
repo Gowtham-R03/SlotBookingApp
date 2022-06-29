@@ -1,0 +1,67 @@
+.example-spacer {
+    flex: 1 1 auto;
+}
+
+.toolBar {
+    position: sticky;
+    position: -webkit-sticky;
+    /* For macOS/iOS Safari */
+    top: 0;
+    /* Sets the sticky toolbar to be on top */
+    z-index: 1000;
+    /* Ensure that your app's content doesn't overlap the toolbar */
+    background-color: #d4b1c0;
+}
+
+.sidenav-container {
+    width: 100%;
+    height: calc(205vh - 115vh);
+    border: 1px solid rgba(111, 111, 111, 0.50);
+}
+
+.sidenav-content {
+    display: flex;
+    height: 98%;
+    align-items: center;
+    justify-content: center;
+    margin-left: -1em;
+    margin-right: -1em;
+}
+
+.sidenav {
+    width: 200px;
+    background-color: rgb(255, 255, 255);
+    padding: 20px;
+}
+
+.text1 {
+    padding-left: 750px;
+    font-weight: bold;
+    font-size: xx-large;
+    word-spacing: 15px;
+}
+
+.itemButton {
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+.calender {
+    margin-right: 10px;
+}
+
+.menu {
+    font-size: 40px;
+}
+
+.loginIcon {
+    font-size: 40px;
+}
+
+.accountIcon {
+    font-size: 40px;
+}
+
+.example-icon {
+    margin-right: 30px;
+}
